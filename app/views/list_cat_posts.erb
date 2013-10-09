@@ -1,0 +1,32 @@
+<h1><%= @category.name %></h1>
+
+   
+   <table>
+    <thead>
+      <tr>
+        <th>Item ID</th>
+        <th>Item</th>
+        <th>Description</th>
+        <th>Price</th>
+
+        <th>Contact Email</th>
+      </tr> 
+    </thead>
+    <tbody> 
+      <% @posts.each do |post|%>
+        <tr>
+      
+          <td><a href="/posts/<%= post.id %>"><%= post.id %></a></td>
+          <td><a href="/posts/<%= post.id %>"><%= post.item %></a></td>
+          <td><a href="/posts/<%= post.id %>"><%= post.description %></a></td>
+          <td>$<%= post.price %>.00</td>
+          <td><%= post.email %></td>
+        </tr>
+      <%end%>
+
+    </tbody>
+
+
+   </table>
+
+  

@@ -1,0 +1,26 @@
+<h1>Categories</h1>
+   <table>
+    <thead>
+      <tr>
+        <th>Category ID</th>
+        <th>Name</th>
+       
+      </tr> 
+    </thead>
+    <tbody>
+
+      <% @categories.each do |category| %>
+        <tr>
+          <td><%= category.id %></td>
+          <td><a href="/categories/<%= category.id %>"><%= category.name %></a></td>
+        </tr>
+      <% end  %>
+
+
+
+    </tbody>
+
+
+   </table>
+
+

@@ -1,13 +1,24 @@
 <div class="container">
-  <h1>Welcome to Sinatra!</h1>
-  <p>Hello, world!</p>
+  <h1>Welcome to Emily's Craigslist</h1>
+  <p>Please type some stuff in here</p>
 
   <table>
-
-    <form action ='/items' method='post'>
-      <input type= 'text' name='user_input'>
+    <label for = 'select a cat'>Looking for a category?</label>
+    <form action ='/categories' method='post'>
+      <input type= 'text' name='user_input' placeholder = 'category'>
       <input type = 'submit' name = 'submit'>
+      <br>
     </form>
+
+    <label for = 'select a cat'>Looking for an item?</label>
+    <form action ='/items' method ='post'>
+      <input type = 'text' name ='user_input' placeholder = 'item'>
+      <input type = 'submit' name = 'submit'>
+      <br>
+    </form>
+
+    <a href="/categories">Let's make it easy... Click here to view all categories</a>
+
 
    </table>
 </div>
